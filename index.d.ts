@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2023 The Stdlib Authors.
@@ -16,26 +16,27 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
+
+import { ndarray } from '@stdlib/types/ndarray';
 
 /**
-* Return the index offset specifying the underlying buffer index of the first iterated ndarray element.
+* Returns the index offset specifying the underlying buffer index of the first iterated ndarray element.
 *
-* @module @stdlib/ndarray-offset
+* @param x - input ndarray
+* @returns index offset
 *
 * @example
-* var zeros = require( '@stdlib/ndarray-zeros' );
-* var offset = require( '@stdlib/ndarray-offset' );
+* var zeros = require( `@stdlib/ndarray/zeros` );
 *
 * var n = offset( zeros( [ 3, 3, 3 ] ) );
 * // returns 0
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function offset( x: ndarray ): number;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = offset;
