@@ -45,14 +45,30 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/ndarray-offset
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import offset from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-offset@esm/index.mjs';
+var offset = require( '@stdlib/ndarray-offset' );
 ```
 
 #### offset( x )
@@ -60,7 +76,7 @@ import offset from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-offset@esm/ind
 Returns the index offset specifying the underlying buffer index of the first iterated [ndarray][@stdlib/ndarray/ctor] element.
 
 ```javascript
-import zeros from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-zeros@esm/index.mjs';
+var zeros = require( '@stdlib/ndarray-zeros' );
 
 var x = zeros( [ 3, 2, 3 ] );
 // returns <ndarray>
@@ -91,17 +107,12 @@ var n = offset( x );
 
 <!-- eslint-disable new-cap -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import zeros from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-zeros@esm/index.mjs';
-import slice from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-slice@esm/index.mjs';
-import E from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-multi@esm/index.mjs';
-import S from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-ctor@esm/index.mjs';
-import offset from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-offset@esm/index.mjs';
+```javascript
+var zeros = require( '@stdlib/ndarray-zeros' );
+var slice = require( '@stdlib/ndarray-slice' );
+var E = require( '@stdlib/slice-multi' );
+var S = require( '@stdlib/slice-ctor' );
+var offset = require( '@stdlib/ndarray-offset' );
 
 // Create an array:
 var x = zeros( [ 10, 10, 10, 10 ] );
@@ -132,10 +143,6 @@ for ( i = 0; i < slices.length; i++ ) {
     s = slice( x, slices[ i ] );
     console.log( '%s => %d', s.shape.join( 'x' ), offset( s ) );
 }
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -167,7 +174,7 @@ for ( i = 0; i < slices.length; i++ ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -197,8 +204,8 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/ndarray-offset.svg
 [npm-url]: https://npmjs.org/package/@stdlib/ndarray-offset
 
-[test-image]: https://github.com/stdlib-js/ndarray-offset/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/ndarray-offset/actions/workflows/test.yml?query=branch:main
+[test-image]: https://github.com/stdlib-js/ndarray-offset/actions/workflows/test.yml/badge.svg?branch=v0.1.0
+[test-url]: https://github.com/stdlib-js/ndarray-offset/actions/workflows/test.yml?query=branch:v0.1.0
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/ndarray-offset/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/ndarray-offset?branch=main
@@ -227,7 +234,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/ndarray-offset/main/LICENSE
 
-[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/stdlib/tree/esm
+[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/stdlib
 
 </section>
 
