@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/ndarray-offset",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Return the index offset specifying the underlying buffer index of the first iterated ndarray element.",
   "license": "Apache-2.0",
   "author": {
@@ -45,7 +45,7 @@
   },
   "devDependencies": {
     "@stdlib/array-base-zeros": "^0.1.1",
-    "@stdlib/array-float64": "^0.1.0",
+    "@stdlib/array-float64": "^0.1.1",
     "@stdlib/bench": "^0.1.0",
     "@stdlib/ndarray-ctor": "^0.1.0",
     "@stdlib/ndarray-slice": "github:stdlib-js/ndarray-slice#main",
