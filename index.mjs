@@ -1,0 +1,4 @@
+// Copyright (c) 2025 The Stdlib Authors. License is Apache-2.0: http://www.apache.org/licenses/LICENSE-2.0
+/// <reference types="./index.d.ts" />
+import{isPrimitive as e}from"https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-nonnegative-integer@v0.2.2-esm/index.mjs";import r from"https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-collection@v0.2.2-esm/index.mjs";import t from"https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-strides2offset@v0.2.2-esm/index.mjs";import s from"https://cdn.jsdelivr.net/gh/stdlib-js/error-tools-fmtprodmsg@v0.2.2-esm/index.mjs";function i(i){var n,o,d;if("object"!=typeof i||null===i)throw new TypeError(s("1k9Dv",i));if(d=i.offset,e(d))return d;if(o=i.shape,!r(o))throw new TypeError(s("1k9Dv",i));if(n=i.strides,0===o.length||!r(n))return 0;if(d=t(o,n),e(d))return d;throw new TypeError(s("1k9Dv",i))}export{i as default};
+//# sourceMappingURL=index.mjs.map
